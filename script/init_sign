@@ -1,0 +1,9 @@
+#!/bin/sh
+. "$(dirname $0)/env"
+sign() {
+    signedApk=$1
+    unsignedApk=$2
+    apksigner="$ANDROID_HOME/build-tools/${BUILD_TOOLS_VERSION:=29.0.3}/apksigner"
+    . ./signing.properties
+    "$apksigner" sign  --ks "$storeFile"  --ks-key-alias $keyAlias --ks-pass "pass:$storePassword"  --key-pass pass:$keyPassword --out "$signedApk" "$unsignedApk"
+}

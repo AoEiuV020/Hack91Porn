@@ -1,4 +1,5 @@
 #!/bin/sh
 . "$(dirname $0)/env"
+. "$(dirname $0)/init_sign"
 cd $ROOT
 sign 91-dist.apk 91/dist/91.apk
