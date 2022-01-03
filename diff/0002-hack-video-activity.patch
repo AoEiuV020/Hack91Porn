@@ -1,0 +1,54 @@
+From f70816a4645b669b503f9dbc9e179d8b0dc1fa4e Mon Sep 17 00:00:00 2001
+From: AoEiuV020 <aoeiuv020@gmail.com>
+Date: Tue, 4 Jan 2022 00:03:24 +0800
+Subject: [PATCH] hack video activity
+
+---
+ smali/com/dft/shot/android/h/s.smali                  | 8 +++++++-
+ smali/com/dft/shot/android/ui/VideoListActivity.smali | 4 ++++
+ 2 files changed, 11 insertions(+), 1 deletion(-)
+
+diff --git a/smali/com/dft/shot/android/h/s.smali b/smali/com/dft/shot/android/h/s.smali
+index f9b353ec..b4e97742 100644
+--- a/smali/com/dft/shot/android/h/s.smali
++++ b/smali/com/dft/shot/android/h/s.smali
+@@ -409,7 +409,13 @@
+ .end method
+ 
+ .method public c(Ljava/lang/String;)Z
+-    .locals 2
++    .registers 2
++
++    .prologue
++    .line 8
++    const/4 v0, 0x1
++
++    return v0
+ 
+     .line 2
+     invoke-static {}, Lcom/dft/shot/android/h/F;->h()Lcom/dft/shot/android/h/F;
+diff --git a/smali/com/dft/shot/android/ui/VideoListActivity.smali b/smali/com/dft/shot/android/ui/VideoListActivity.smali
+index 74116662..7d8800a6 100644
+--- a/smali/com/dft/shot/android/ui/VideoListActivity.smali
++++ b/smali/com/dft/shot/android/ui/VideoListActivity.smali
+@@ -380,6 +380,8 @@
+ 
+     iget v2, p1, Lcom/dft/shot/android/bean/HomeBean;->coins:I
+ 
++    const/4 v2, 0x0
++
+     if-ge v2, v1, :cond_3
+ 
+     .line 17
+@@ -1941,6 +1943,8 @@
+ 
+     const/4 v3, 0x1
+ 
++    const/4 v2, 0x0
++
+     if-ge v2, v3, :cond_4
+ 
+     .line 8
+-- 
+2.25.1
+
