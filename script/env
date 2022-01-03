@@ -1,0 +1,6 @@
+#!/bin/sh
+set -e
+script_dir=$(cd $(dirname $0);pwd)
+ROOT=$(dirname $script_dir)
+diff_dir=$ROOT/diff
+mkdir -p $diff_dir

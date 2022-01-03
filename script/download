@@ -1,0 +1,5 @@
+#!/bin/sh
+. "$(dirname $0)/env"
+cd $ROOT
+curl -o 91.apk -L \
+    'https://github.com/AoEiuV020/Hack91Porn/releases/download/0/91_release_12-27_4.5.5_a1000.apk'

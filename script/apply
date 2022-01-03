@@ -1,0 +1,4 @@
+#!/bin/sh
+. "$(dirname $0)/env"
+cd $ROOT/91
+patch -p1 <../diff/0001-fake-ad.patch

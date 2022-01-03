@@ -1,0 +1,53 @@
+From 1c131f232aae9aaddf747c82184ce8b3ec83ade3 Mon Sep 17 00:00:00 2001
+From: AoEiuV020 <aoeiuv020@gmail.com>
+Date: Mon, 3 Jan 2022 21:49:37 +0800
+Subject: [PATCH] fake ad
+
+---
+ smali/com/dft/shot/android/adapter/HomeAdapter.smali       | 2 ++
+ smali/com/dft/shot/android/adapter/VideoListAdapter.smali  | 2 ++
+ smali/com/dft/shot/android/ui/home/RecommendFragment.smali | 2 ++
+ 3 files changed, 6 insertions(+)
+
+diff --git a/smali/com/dft/shot/android/adapter/HomeAdapter.smali b/smali/com/dft/shot/android/adapter/HomeAdapter.smali
+index 583bc43a..fde5491b 100644
+--- a/smali/com/dft/shot/android/adapter/HomeAdapter.smali
++++ b/smali/com/dft/shot/android/adapter/HomeAdapter.smali
+@@ -685,6 +685,8 @@
+ 
+     const v4, 0x7f09060e
+ 
++    const v3, true
++
+     if-eqz v3, :cond_7
+ 
+     const v3, 0x7f09041e
+diff --git a/smali/com/dft/shot/android/adapter/VideoListAdapter.smali b/smali/com/dft/shot/android/adapter/VideoListAdapter.smali
+index 895d2c5b..9f18acf8 100644
+--- a/smali/com/dft/shot/android/adapter/VideoListAdapter.smali
++++ b/smali/com/dft/shot/android/adapter/VideoListAdapter.smali
+@@ -766,6 +766,8 @@
+ 
+     const v4, 0x7f09060e
+ 
++    const v3, true
++
+     if-eqz v3, :cond_7
+ 
+     const v3, 0x7f09041e
+diff --git a/smali/com/dft/shot/android/ui/home/RecommendFragment.smali b/smali/com/dft/shot/android/ui/home/RecommendFragment.smali
+index ef8368f9..f4cf13b9 100644
+--- a/smali/com/dft/shot/android/ui/home/RecommendFragment.smali
++++ b/smali/com/dft/shot/android/ui/home/RecommendFragment.smali
+@@ -386,6 +386,8 @@
+ 
+     const-string v2, ""
+ 
++    const v1, true
++
+     if-eqz v1, :cond_1
+ 
+     .line 19
+-- 
+2.25.1
+

@@ -1,0 +1,4 @@
+#!/bin/sh
+. "$(dirname $0)/env"
+cd $ROOT
+apktool d 91.apk

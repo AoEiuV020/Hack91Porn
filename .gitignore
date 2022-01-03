@@ -1,0 +1,9 @@
+/.idea
+/*.jks
+/*.jks.txt
+/signing.properties
+/*.apk
+/*-mapping.txt
+/*.apk.idsig
+/91/
+/apktool/
