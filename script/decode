@@ -2,4 +2,4 @@
 . "$(dirname $0)/env"
 . "$(dirname $0)/init_apktool"
 cd $ROOT
-apktool d 91.apk
+apktool d -r 91.apk
