@@ -71,18 +71,20 @@ jobs:
           script/decode
           script/apply
           script/rebuild
-          mv 91/dist/91.apk $BUILD_NAME_WITH_VERSION.apk
       - uses: AoEiuV020/sign-android-release@v2
         name: Sign app APK
         env:
           SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
         if: ${{ env.SIGNING_KEY != '' }}
         with:
-          releaseDirectory: .
+          releaseDirectory: ./91/dist
           signingKeyBase64: ${{ secrets.SIGNING_KEY }}
           alias: ${{ secrets.ALIAS }}
           keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
           keyPassword: ${{ secrets.KEY_PASSWORD }}
+      - name: move
+        run: |
+          mv 91/dist/91.apk $BUILD_NAME_WITH_VERSION.apk
       - name: Upload APK
         uses: actions/upload-artifact@master
         with:
