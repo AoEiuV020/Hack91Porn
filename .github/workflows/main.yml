@@ -71,7 +71,7 @@ jobs:
           script/decode
           script/apply
           script/rebuild
-          mv 91.apk $BUILD_NAME_WITH_VERSION.apk
+          mv 91-dist.apk $BUILD_NAME_WITH_VERSION.apk
       - uses: AoEiuV020/sign-android-release@v2
         name: Sign app APK
         env:
