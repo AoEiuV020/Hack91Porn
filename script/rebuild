@@ -3,5 +3,4 @@
 . "$(dirname $0)/init_apktool"
 cd $ROOT
 apktool b 91
-mv 91/dist/91.apk 91-dist.apk
 

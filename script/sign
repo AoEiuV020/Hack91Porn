@@ -1,6 +1,4 @@
 #!/bin/sh
 . "$(dirname $0)/env"
 cd $ROOT
-mv 91-dist.apk 91-unsigned.apk
-sign 91-dist.apk 91-unsigned.apk
-rm 91-unsigned.apk
+sign 91-dist.apk 91/dist/91.apk
