@@ -1,0 +1,12 @@
+#!/bin/sh
+. "$(dirname $0)/env"
+if !(which apktool > /dev/null)
+then
+    cd $ROOT/apktool
+    if ! [ -f apktool.jar ]
+    then
+        curl -L -o apktool.jar \
+            'https://github.com/iBotPeaches/Apktool/releases/download/v2.6.0/apktool_2.6.0.jar'
+    fi
+    PATH=$PWD:$PATH
+fi
